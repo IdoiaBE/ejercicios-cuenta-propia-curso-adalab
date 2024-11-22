@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.cabecera{
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgb(104, 13, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
