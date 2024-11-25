@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+}
+
+h1{
+    padding: 20px;
+}
+
+.table_header{
+    background-color: aquamarine;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.table_header td{
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.table_body{
+    text-align: center;
+}
+
+.table_body td{
+    padding: 10px 5px 10px 5px;
+    min-width: 200px;
+}
