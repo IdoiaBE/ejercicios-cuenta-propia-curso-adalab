@@ -8,19 +8,32 @@
     bottom: 0;
     border-top: 2px solid $main-color;
     &_content{
+        font-size: 14px;
         position: relative;
+        &-circle{
+            background-color: $main_color;
+            color: $color-secondary;
+            font-weight: bold;
+            padding: 15px 18px 15px 18px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 200%;
+            right: 25%;
+        }
     }
-    &_content-circle{
-        background-color: $main_color;
-        color: $color-secondary;
-        font-weight: bold;
-        padding: 15px 18px 15px 18px;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 50%;
-    }
-    @media (width>768px){
         
+    @media (min-width: 769px){
+        .footer {
+            display: block;
+        }
+        &_content{
+            display: flex;
+            justify-content: space-between;
+            &-circle{
+                position:static;
+            }
+        }
+
     }
     
   }
