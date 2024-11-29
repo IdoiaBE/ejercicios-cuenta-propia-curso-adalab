@@ -1,13 +1,10 @@
 .section_button{
-    height: 45px;
+    height: 80px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 10px;
-
-    &-title{
-        font-family: $main_font;
-    }
     
     &-button{
         background-color: red;

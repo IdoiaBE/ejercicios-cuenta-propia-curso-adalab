@@ -3,6 +3,10 @@
 /*@import 'components/code';
 @import 'components/links';*/
 
+:root{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 @import "layout/header";
 @import "layout/hero";
 @import "layout/button-section";
