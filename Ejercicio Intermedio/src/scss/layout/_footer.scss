@@ -1,6 +1,27 @@
 .footer{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    z-index: 1;
-    border-top: 4px $main-color;
+    bottom: 0;
+    border-top: 2px solid $main-color;
+    &_content{
+        position: relative;
+    }
+    &_content-circle{
+        background-color: $main_color;
+        color: $color-secondary;
+        font-weight: bold;
+        padding: 15px 18px 15px 18px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50%;
+    }
+    @media (width>768px){
+        
+    }
+    
   }
   
