@@ -1,49 +1,44 @@
+<!-- 
+ EJERCICIO 1: Quiero que cuando abra la página se muestre sólo el icono del menú y que cuando haga click sobre él aparezca la lista.
+ 
+PASOS:
+1.Esconder la lista para cuando se cargue la web--Ponerle un display:none
+2.Escuchar el evento del "click" y programar respuesta--Llamar al botón en js + addEventListener sobre él (evento="click", respuesta=desplegar lista)
+
+EJERCICIO 2: Quiero que al pinchar en la etiqueta de modo oscuro se ponga el fondo en negro y al pinchar en la etiqueta de modo claro se ponga el fondo blanco/claro
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events class exercise</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-
 <body>
 
-    <h1>Eventos</h1>
-    <button class="js-button">☰</button>
-    <nav class="hidden js-menuNav">
-        <ul>
-            <li>¿Quienes somos?</li>
+    <h1>EVENTOS</h1>
+
+    <button class="js-btnMenu">☰</button>
+    <nav>
+        <ul class="hidden js-listMenu">
+            <li>¿Quiénes somos?</li>
             <li>Contacto</li>
         </ul>
     </nav>
-    <main class="js-main">
-        <a href="#" class="js-dark"> Modo oscuro</a>
-        <a href="#" class="js-ligth"> Modo claro</a>
 
-        <h2>Eventos</h2>
-        <button>Saludame</button>
+    <main>
+        <a href="">Modo oscuro</a>
+        <a href="">Modo claro</a>
     </main>
-
-    <section class="modal js-modal">
-        <div class="content">
-            <h2>Contenido ventana modal</h2>
-            <button class="js-close">X</button>
-            <form class="js-form">
-                <input type="text" class="js-name" />
-                <input type="submit" />
-            </form>
-        </div>
-    </section>
-
-    <ul class="fruits">
-        <li class="fruit fruit-strawberry">Fresa</li>
-        <li class="fruit fruit-banana">Plátano</li>
-        <li class="fruit fruit-kiwi">Kiwi</li>
-    </ul>
-
-    <script src="./js/main.js" type="text/javascript"></script>
+    
+    <script src="./js/main.js"></script>
+    <!--
+Si tenemos scripts de diferentes tipos... es obligatorio decir que este fichero es type="text/javascript"
+-->
 </body>
-
 </html>
+
+
+<!-- Script = Bloque de código con un computo de órdenes/instrucciones -->

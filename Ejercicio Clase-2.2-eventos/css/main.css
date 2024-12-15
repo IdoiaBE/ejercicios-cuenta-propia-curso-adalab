@@ -4,46 +4,7 @@ main{
     height: 100vh;
 }
 
-.dark{
-    background-color: black;
-    color: white;
-}
-.ligth{
-    background-color: lightgray;
-    color: blueviolet;
-}
-.modal{
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(80, 83, 91, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content{
-    background-color: white;
-    width: 50%;
-}
-.content button{
-    display: block;
-}
-
-.hidden {
+/* Le pongo clase hidden a los elementos que no quiero que se muestren al cargar la web, en este caso la lista (ul) del menú */
+.hidden{
     display: none;
-}
-
-.fruit {
-    padding: 6px;
-    cursor: pointer;
-    border-bottom: 3px solid #b9b8ba;
-    /* grey */
-}
-
-.fruit--selected {
-    border-bottom: 3px solid #64dac4;
-    /* green */
 }
