@@ -1,10 +1,32 @@
 
+/* Le pongo clase hidden a los elementos que no quiero que se muestren al cargar la web, en este caso la lista (ul) del menú */
+.hidden{
+    display: none;
+}
 
 main{
     height: 100vh;
 }
 
-/* Le pongo clase hidden a los elementos que no quiero que se muestren al cargar la web, en este caso la lista (ul) del menú */
-.hidden{
-    display: none;
-}
+/* Creo un estilo de modo oscuro y otro de modo claro para la sección main*/
+ .dark{
+    background-color: black;
+    color: white;
+    a{
+        color: white;
+    }
+    .darkLink{
+        text-decoration: none;
+    }
+ }
+
+ .light{
+    background-color: lightgrey;
+    color: black;
+    a{
+        color: black;
+    }
+    .lightLink{
+        text-decoration: none;
+    }
+ }

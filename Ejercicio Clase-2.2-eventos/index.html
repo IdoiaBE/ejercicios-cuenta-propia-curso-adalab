@@ -3,9 +3,14 @@
  
 PASOS:
 1.Esconder la lista para cuando se cargue la web--Ponerle un display:none
-2.Escuchar el evento del "click" y programar respuesta--Llamar al botón en js + addEventListener sobre él (evento="click", respuesta=desplegar lista)
+2.Escuchar el evento del "click" y programar respuesta--Llamar al botón y a la lista en js + addEventListener sobre el botón (evento="click", respuesta=desplegar lista)
 
 EJERCICIO 2: Quiero que al pinchar en la etiqueta de modo oscuro se ponga el fondo en negro y al pinchar en la etiqueta de modo claro se ponga el fondo blanco/claro
+
+PASOS:
+1.Crear los estilos en CSS de modo oscuro y modo claro
+2.Escuchar el evento del "click" en el modo oscuro y programar respuesta--Llamar al enlace de modo oscuro y al main + addEventListener sobre el enlace (evento=click, respuesta=añadir clase dark)
+3.Escuchar el evento del "click" en el modo claro y programar respuesta--Llamar al enlace de modo claro + addEventListener sobre el enlace (evento=click, respuesta=añadir clase light)
 -->
 
 <!DOCTYPE html>
@@ -28,10 +33,17 @@ EJERCICIO 2: Quiero que al pinchar en la etiqueta de modo oscuro se ponga el fon
         </ul>
     </nav>
 
-    <main>
-        <a href="">Modo oscuro</a>
-        <a href="">Modo claro</a>
+    <main class="js-main">
+        <a href="#" class="darkLink js-darkMode">Modo oscuro</a>
+        <a href="#" class="lightLink js-lightMode">Modo claro</a>
+
+        <h2>Eventos</h2>
+        <button>Salúdame</button>
     </main>
+
+    <section class="modal">
+
+    </section>
     
     <script src="./js/main.js"></script>
     <!--
