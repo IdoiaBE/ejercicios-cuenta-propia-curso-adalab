@@ -6,9 +6,13 @@ const menuList = document.querySelector('.js-listMenu');
 const darkMode = document.querySelector('.js-darkMode');
 const lightMode = document.querySelector('.js-lightMode');
 const main = document.querySelector('.js-main');
+const buttonClose = document.querySelector('.js-btnClose');
+const modal = document.querySelector('.js-modal');
+const form = document.querySelector('.js-form');
+const text = document.querySelector('.js-text');
 
 // Segundo paso: Escucho el evento y programo una respuesta
-//Sintáxis= nombre-de-la-constante o variable-creada-en-js.addEventListener('tipo de evento', código a ejecutar)
+//Sintáxis=> nombre-de-la-constante o variable-creada-en-js.addEventListener('tipo de evento', función con código a ejecutar)
 
 buttonMenu.addEventListener('click', () => {
   menuList.classList.toggle('hidden');
@@ -29,4 +33,29 @@ darkMode.addEventListener('click', () => {
 lightMode.addEventListener('click', () => {
   main.classList.add('light');
   main.classList.remove('dark');
+});
+
+//Si sólo le añado la clase hidden, la clase modal ya tiene una caracterñisticas y un display flex y como va la última en el css va a predominar asi que también tengo que quitarle la clase modal
+//o poner la clase hidden al final
+
+buttonClose.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  modal.classList.remove('modal')
+});
+
+//Dos maneras: escuchar el evento de hacer click en el botón de enviar y escuchar el evento del submit en el formulario
+
+//2.
+form.addEventListener('submit', (event) => {
+  //Cuando ejecuto la función arrow, el navegador me da un montón de info de ese evento, que se recibe entre los parámetros ().
+
+  //Para prevenir que el evento submit refresque la página
+  event.preventDefault();
+
+  //Para ver en la consola qué info tiene ese evento
+  console.log(event);
+
+  //Para que la consola me indique cuales son estas dos propiedades en este evento
+  console.log(event.currentTarget);
+  console.log(event.target);
 });
