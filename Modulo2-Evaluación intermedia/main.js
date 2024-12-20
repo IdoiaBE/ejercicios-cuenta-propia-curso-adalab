@@ -20,35 +20,54 @@ const playButton = document.querySelector('.js-btn');
 
 const message = document.querySelector('.js-text');
 
+//esta función me genera un número aleatorio
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
    }  
 
-// function numberToAction (){
-//     if (getRandomNumber <= 3){
-//         getRandomNumber = piedra
-//     } else (getRandomNumber >= 7) {
-//         getRandomNumber = papel
-//     }
-// }
+//esta función me traduce ese número a la acción 'piedra, papel o tijera'
+function numberToAction (){
+    //guardo el número aleatorio (máximo 9) que me ha creado la función
+    const randomNumber = getRandomNumber(9);
+    console.log (randomNumber)
+
+    //si el número es menor o igual a tres lo voy a guardar con la palabra 'piedra'...
+    if (randomNumber <= 3) {
+        return 'rock'
+    } else if (randomNumber >= 7) {
+        return 'paper'
+    } else {
+        return 'scissors'
+    }
+
+}
    
 
 function handleClick () {
+    //guardo la opción que ha seleccionado la usuaria
     const selectValue = selectOptions.value;
-    
     console.log (selectValue)
-    
-    const isRock = selectValue === 'rock';
 
-    console.log (isRock)
+    //guardo la acción/palabra que se haya generado con la función numberToAction
+    const randomAction = numberToAction ();
+    console.log (randomAction)
 
-    const isPaper = selectValue === 'paper';
-
-    console.log (isPaper)
-
-    const isScissors = selectValue === 'scissors';
-    console.log(isScissors)
-
+    //si la opcion elegida por la usuaria y la acción random son iguales, se pinta 'Empate'...
+    if (selectValue === randomAction) {
+        message.innerHTML = 'Empate.';
+    } else if (selectValue === 'scissors' && randomAction === 'paper') {
+        message.innerHTML = 'Has ganado!'; 
+    } else if (selectValue === 'paper' && randomAction === 'rock') {
+        message.innerHTML = 'Has ganado!';
+    } else if (selectValue === 'rock' && randomAction === 'scissors') {
+        message.innerHTML = 'Has ganado!';
+    } else if (selectValue === 'scissors' && randomAction === 'rock') {
+        message.innerHTML = 'Has perdido :(';
+    } else if (selectValue === 'paper' && randomAction === 'scissors') {
+        message.innerHTML = 'Has perdido :(';
+    } else if (selectValue === 'rock' && randomAction === 'paper') {
+        message.innerHTML = 'Has perdido :(';
+    }
 }
 
 playButton.addEventListener('click', handleClick)
