@@ -40,8 +40,7 @@ function numberToAction (){
         return 'scissors'
     }
 
-}
-   
+}  
 
 function handleClick () {
     //guardo la opción que ha seleccionado la usuaria
@@ -67,7 +66,7 @@ function handleClick () {
         message.innerHTML = 'Has perdido :(';
     } else if (selectValue === 'rock' && randomAction === 'paper') {
         message.innerHTML = 'Has perdido :(';
-    }
+    }  
 }
 
 playButton.addEventListener('click', handleClick)
