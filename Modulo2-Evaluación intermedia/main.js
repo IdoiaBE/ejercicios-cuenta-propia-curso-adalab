@@ -16,3 +16,12 @@
 
 const selectOptions = document.querySelector('.js-select');
 
+const playButton = document.querySelector('.js-btn');
+
+const message = document.querySelector('.js-text');
+
+function handleClick () {
+    
+}
+
+playButton.addEventListener('click', handleClick)
